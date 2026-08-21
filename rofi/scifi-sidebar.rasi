@@ -1,0 +1,87 @@
+/* ~/.config/rofi/scifi-sidebar.rasi */
+
+configuration {
+  modi:             "drun,run";
+  show-icons:         false; /* No icons, pure data look */
+  display-drun:         "$ ";
+  display-run:        "// CMD_PROMPT :";
+  drun-display-format:    "{name}";
+}
+
+* {
+  /* Color Palette matching the image */
+  bg-matrix:    #0d0d0dd0; /* Deep obsidian with slight opacity */
+  fg-glow:      #ff7900;   /* High-contrast amber/orange */
+  accent-blue:  #ff7900;   /* Electric cyber blue */
+  text-dim:     #5cc4ff;   /* Muted data text */
+  font:         "ProggyClean 10"; /* Use a sharp pixel or terminal font */
+}
+
+window {
+  margin: 10px;
+  margin-top: 5px;
+  location: west;   /* Places it on the left edge */
+  anchor:   west;
+  height:   80%;   /* Full vertical sidebar layout */
+  width:    320px;  /* Fixed width node panel */
+  x-offset: 0px;
+  y-offset: 0px;
+  background-color:   @bg-matrix;
+  border: 2px; /* Only a thin vertical border on the right */
+  border-color:     @accent-blue;
+}
+
+mainbox {
+  background-color:   transparent;
+  spacing:      15px;
+  padding:      30px 15px;
+  children:       [ inputbar, listview ];
+}
+
+inputbar {
+  background-color:   transparent;
+  spacing:      5px;
+  padding:      0px 0px 10px 0px;
+  border:       0px 0px 1px 0px; /* Separator line underneath input */
+  border-color:     @accent-blue;
+  children:       [ prompt, entry ];
+}
+
+prompt {
+  background-color:   transparent;
+  text-color:     @accent-blue;
+}
+
+entry {
+  background-color:   transparent;
+  text-color:     @fg-glow;
+  placeholder:    "...";
+  placeholder-color:  @text-dim;
+}
+
+listview {
+  background-color:   transparent;
+  columns:      1;
+  lines:        30;
+  spacing:      4px;
+  layout:       vertical;
+  fixed-height:     true;
+}
+
+element {
+  background-color:   transparent;
+  padding:      4px 8px;
+}
+
+element-text {
+  background-color:   transparent;
+  text-color:     @text-dim;
+}
+
+element selected {
+  background-color:   #ff790022; /* Soft amber glow background */
+}
+
+element-text selected {
+  text-color:     @fg-glow;
+}
