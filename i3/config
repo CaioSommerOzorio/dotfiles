@@ -217,7 +217,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 bindsym $mod+Shift+s exec --no-startup-id flameshot gui
 
-exec_always --no-startup-id feh --bg-scale /home/undefined/potentialwallpaper.jpeg
+exec_always --no-startup-id feh --bg-scale /home/undefined/wallpaper.jpg
 exec_always picom --config ~/.config/picom/picom.conf
 bindsym $mod+e exec --no-startup-id dolphin
 
