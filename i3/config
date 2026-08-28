@@ -222,7 +222,7 @@ exec_always picom --config ~/.config/picom/picom.conf
 bindsym $mod+e exec --no-startup-id dolphin
 
 title_align center
-default_border pixel 5
+default_border pixel 7
 
 gaps inner 7
 set $cl_high #962a54
@@ -240,5 +240,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 exec --no-startup-id dunst
 
 bindsym $mod+period exec --no-startup-id rofimoji
+bindsym $mod+q exec --no-startup-id qalculate-gtk
+for_window [class="Qalculate-gtk"] floating enable
 
 exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
