@@ -1,0 +1,30 @@
+[window]
+padding = { x = 16, y = 16 }
+
+[font]
+size = 12.0
+normal = { family = "JetBrainsMono ", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+[colors.primary]
+background = "#1b182c"
+foreground = "#cbe3e7"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+chars = "/usr/bin/clear\n"
+
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Control"
+chars = "\u0017"
+
+
+[[keyboard.bindings]]
+key="H"
+mods = "Control"
+chars = "btop\n"
+
