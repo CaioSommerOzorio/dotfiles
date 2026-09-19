@@ -20,6 +20,7 @@ bindsym $mod+s exec --no-startup-id flameshot gui
 bindsym $mod+period exec --no-startup-id rofimoji
 
 # Keybinds
+bindsym $mod+escape exec --no-startup-id systemctl suspend
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+c reload
