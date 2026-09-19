@@ -23,4 +23,12 @@ return {
 
     vim.g.vimtex_quickfix_mode = 0
   end,
+  config = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "tex",
+      callback = function()
+        vim.keymap.set("i", "$", "$$", { buffer = true })
+      end,
+    })
+  end,
 }

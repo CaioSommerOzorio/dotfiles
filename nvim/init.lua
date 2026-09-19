@@ -20,4 +20,3 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 
 -- Surround in $
 vim.keymap.set("v", "$", "c$$<Esc>hp", { noremap = true, silent = true })
-vim.keymap.set("i", "$", "$$<Left>", { noremap = true, silent = true })
