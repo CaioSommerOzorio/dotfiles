@@ -109,3 +109,6 @@ exec --no-startup-id xinput disable "FTSC1000:00 2808:509C"
 
 # wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
+
+# second monitor
+exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
