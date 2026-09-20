@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # THIS WILL REMOVE YOUR PREVIOUS CONFIGURAITONS
-cp -r * ~/.config/
+rsync -av --delete ./.config/* ~/.config/
