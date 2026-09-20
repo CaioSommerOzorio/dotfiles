@@ -15,9 +15,15 @@ floating_modifier $mod
 # Launch apps
 bindsym $mod+Return exec kitty
 bindsym $mod+space exec --no-startup-id rofi -show drun
-bindsym $mod+c exec --no-startup-id qalculate-gtk
 bindsym $mod+s exec --no-startup-id flameshot gui
 bindsym $mod+period exec --no-startup-id rofimoji
+
+# Startup
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
+exec_always --no-startup-id xinput set-prop "ELAN1201:00 04F3:3085 Touchpad" "libinput Tapping Enabled" 1
+exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
+exec_always --no-startup-id ~/.config/picom/launch.sh
 
 # Keybinds
 bindsym $mod+Escape exec --no-startup-id systemctl suspend
@@ -116,23 +122,15 @@ bindsym $mod+Shift+i move container to workspace number $ws11
 bindsym $mod+Shift+o move container to workspace number $ws12
 bindsym $mod+Shift+p move container to workspace number $ws13
 
-# polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-# enable touchpad
-exec_always --no-startup-id xinput set-prop "ELAN1201:00 04F3:3085 Touchpad" "libinput Tapping Enabled" 1
-
 # remove title bar and border
 for_window [class="^.*"] border pixel 0
+for_window [class="kitty"] border pixel 1
+
+client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff
+client.unfocused #000000 #000000 #000000 #000000 #000000
 
 # qalculate floating
-for_window [class="Qalculate"] floating enable
+for_window [class="qalculate"] floating enable
 
 # disable touchscreen
-exec --no-startup-id xinput disable "FTSC1000:00 2808:509C"
-
-# wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
-
-# second monitor
-exec_always --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
+exec --no-startup-id xinput disable "ftsc1000:00 2808:509c"
