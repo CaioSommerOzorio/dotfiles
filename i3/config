@@ -129,6 +129,8 @@ for_window [class="kitty"] border pixel 1
 client.focused   #ffffff #ffffff #ffffff #ffffff #ffffff
 client.unfocused #000000 #000000 #000000 #000000 #000000
 
+hide_edge_borders smart
+
 # qalculate floating
 for_window [class="qalculate"] floating enable
 
