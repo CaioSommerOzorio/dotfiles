@@ -1,0 +1,67 @@
+* {
+    font-family: monospace;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+window#waybar {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 0 1px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    background: #202020;
+}
+
+#workspaces button.urgent {
+    background: #ffffff;
+    color: #000000;
+}
+
+#workspaces button.empty {
+    color: #555555;
+}
+
+#clock,
+#custom-spotify,
+#custom-ipaddress,
+#battery,
+#cpu,
+#memory {
+    padding: 0 6px;
+    margin: 0 1px;
+}
+
+#cpu,
+#memory {
+    /* Equivalent visual treatment to your Polybar prefixes */
+}
+
+#custom-spotify {
+    min-width: 100px;
+}
+
+tooltip {
+    background: #000000;
+    border: 1px solid #202020;
+}
+
+tooltip label {
+    color: #ffffff;
+}

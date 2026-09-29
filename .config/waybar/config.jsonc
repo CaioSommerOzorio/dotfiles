@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 0,
+
+    "modules-left": [
+        "clock"
+    ],
+
+    "modules-center": [
+        "custom/spotify"
+    ],
+
+    "modules-right": [
+        "custom/ipaddress",
+        "battery",
+        "cpu",
+        "memory"
+    ],
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip": false
+    },
+
+    "custom/spotify": {
+        "exec": "playerctl -p fastpotify metadata --format '{{ title }} - {{ artist }}' 2>/dev/null || echo 'No Track Playing'",
+        "interval": 1,
+        "return-type": "plain",
+        "format": "{}",
+        "on-click": "playerctl -p fastpotify play-pause",
+        "on-scroll-up": "playerctl -p fastpotify next",
+        "on-scroll-down": "playerctl -p fastpotify previous"
+    },
+
+    "custom/ipaddress": {
+        "exec": "ip -4 addr show wlan0 | awk '/inet / {print $2}' | cut -d/ -f1",
+        "interval": 3,
+        "format": "{}",
+        "exec-if": "ip link show wlan0 >/dev/null 2>&1",
+        "on-click": ""
+    },
+
+    "battery": {
+        "battery": "BAT0",
+        "adapter": "ADP1",
+        "interval": 5,
+        "format": "{capacity}%",
+        "format-charging": "+{capacity}%",
+        "format-full": "100%"
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "CPU {usage}%"
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "RAM {used}%",
+        "tooltip": false
+    }
+}
