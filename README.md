@@ -5,19 +5,22 @@ This repository contains my dotfiles and scripts for both i3 and niri. The keybi
 
 Make sure you have the following installed:
 
-#### General
+### General
 - nvim
 - kitty
 - rofi
 
-#### i3 specific
+### i3 specific
 - i3
 - polybar
 - picom
+- feh
 
-#### niri specific
+### niri specific
 - niri
 - waybar
+- wl-clipboard
+- swaybg
 
 ## Installation
 To install, clone this repository:
@@ -25,8 +28,10 @@ To install, clone this repository:
 `git clone https://github.com/CaioSommerOzorio/dotfiles`
 
 Then give permissions to the `setup.sh` script and run it:
+
+```bash
+chmod +x setup.sh && ./setup.sh
 ```
-```chmod +x setup.sh && ./setup.sh```
 
 **WARNING**: This script will replace your config files, so make a backup if necessary.
 
