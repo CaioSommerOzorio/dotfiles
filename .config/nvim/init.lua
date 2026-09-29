@@ -18,5 +18,10 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
--- Surround in $
-vim.keymap.set("v", "$", "c$$<Esc>hp", { noremap = true, silent = true })
+-- Surround
+vim.keymap.set("v", "[", "c[]<Esc>hp", { noremap = true, silent = true })
+vim.keymap.set("v", "{", "c{}<Esc>hp", { noremap = true, silent = true })
+vim.keymap.set("v", "(", "c()<Esc>hp", { noremap = true, silent = true })
+
+-- New file
+vim.keymap.set("n", "<leader>nf", ":e %h/", { desc = "New file in current directory" })
