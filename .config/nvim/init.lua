@@ -8,7 +8,7 @@ vim.filetype.add({ extension = { asm = "nasm" } })
 
 -- VimTeX config
 vim.g.tex_flavor = "latex"
-vim.g.vimtex_view_method = "zathura"
+vim.g.vimtex_view_method = "sioyek"
 vim.g.vimtex_compiler_method = "latexmk"
 
 -- Telescope configs
@@ -25,3 +25,8 @@ vim.keymap.set("v", "(", "c()<Esc>hp", { noremap = true, silent = true })
 
 -- New file
 vim.keymap.set("n", "<leader>nf", ":e %h/", { desc = "New file in current directory" })
+
+-- Buffer manipulation
+-- Move buffers around
+vim.keymap.set("n", "<C-S-h>", "[B", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-S-l>", "]B", { noremap = true, silent = true })

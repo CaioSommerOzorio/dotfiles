@@ -4,7 +4,7 @@ return {
 
   init = function()
     -- Viewer
-    vim.g.vimtex_view_method = "zathura"
+    vim.g.vimtex_view_method = "sioyek"
 
     -- Compiler
     vim.g.vimtex_compiler_method = "latexmk"
@@ -22,13 +22,5 @@ return {
     }
 
     vim.g.vimtex_quickfix_mode = 0
-  end,
-  config = function()
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "tex",
-      callback = function()
-        vim.keymap.set("i", "$", "$$", { buffer = true })
-      end,
-    })
   end,
 }
