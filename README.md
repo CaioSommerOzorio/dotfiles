@@ -45,9 +45,18 @@ The font used is: NotoSans-Regular.ttf: "Noto Sans" "Regular"
 
 You may also want to configure polybar/waybar to look for your specific music player.
 
-Polybar/waybar also requires network information so make sure it's referencing the correct network interface.
+Polybar/waybar also requires network inform ation so make sure it's referencing the correct network interface.
 
 VimTeX uses zathura pdf viewer and the following LaTeX packages:
 - texlive-latex 2026.1-1
 - texlive-latexextra 2026.1-1
 - texlive-latexrecommended 2026.1-1
+
+## Overview
+For moving around workspaces, `Mod+(1-9)` can be used. In i3, `Mod+(i, o, p)` can be used to access 3 workspaces on the right monitor. For moving windows between workspaces, use `Mod+Shift+workspace`.
+
+For opening applications:
+- Terminal: `Mod+Return`
+- Application launcher: `Mod+Space`
+- Emoji picker: `Mod+Period`
+- Calculator: `Mod+C`
