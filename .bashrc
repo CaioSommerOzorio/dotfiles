@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias c='xclip -selection clipboard'
 PS1='\u@\h [\W]\n\$ '
-alias cls="printf '\033[2J\033[3J\033[1;1H'"
+alias cls="clear && printf '\e[3J'"
 . /etc/os-release
 osname=${NAME,,}
 cowsay bros using ${osname// linux/} btw
