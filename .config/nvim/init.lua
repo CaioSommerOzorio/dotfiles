@@ -42,16 +42,27 @@ require("lazy").setup({
         require("mini.pairs").setup()
     end,
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     build = ":TSUpdate",
     config = function()
-    require("nvim-treesitter").setup({})
+    require("nvim-treesitter").install({
+      "c",
+      "cpp",
+      "lua",
+      "python",
+      "vim",
+      "vimdoc",
+    })
 
     vim.api.nvim_create_autocmd("FileType", {
-      callback = function()
-      local ok = pcall(vim.treesitter.start)
+      callback = function(args)
+      local lang = vim.treesitter.language.get_lang(args.match)
+      if lang then
+        pcall(vim.treesitter.start, args.buf, lang)
+      end
       end,
     })
     end,
@@ -63,6 +74,19 @@ require("lazy").setup({
       -- optional but recommended
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     }
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "^4.0.0", 
+    event = "VeryLazy",
+     config = function()
+       require("nvim-surround").setup({})
+     end,
+  },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {},
   }
 })
 
@@ -70,4 +94,11 @@ require("lazy").setup({
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
 
+-- colorscheme
 vim.cmd.colorscheme("monochrome")
+
+-- show trailing whitespaces
+vim.opt.list = true
+vim.opt.listchars = {
+  trail = '-', 
+}
