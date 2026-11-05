@@ -1,0 +1,87 @@
+
+configuration {
+  modi: "drun,run,window";
+  icon-theme: "Papirus";
+  show-icons: false;
+  terminal: "alacritty";
+  drun-display-format: "{icon} {name}";
+  location: 0;
+  disable-history: false;
+  hide-scrollbar: true;
+  display-drun: "> ";
+  display-run: " 🏃  Run ";
+  display-window: " 🪟  Window ";
+  sidebar-mode: true;
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #000000;
+  bg-alt: #0d0d0d;
+  fg: #ffffff;
+
+  background-color: @bg;
+  border: 0;
+
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 35%;
+  border: 2px;
+  border-color: @fg;
+  border-radius: 2px;
+}
+
+element {
+  padding: 8px 4px;
+  width: 80%;
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+  text-color: @fg;
+  border-radius: 16px;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12px;
+  text-color: @fg;
+}
+
+inputbar {
+  margin: 8px 8px 4px 8px;
+  border-radius: 16px;
+  children: [prompt, entry];
+}
+
+listview {
+  margin: 4px 8px 12px 8px;
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
+
+prompt {
+  border-radius: 2px;
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12px;
+  text-color: @fg;
+}

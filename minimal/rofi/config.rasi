@@ -1,0 +1,79 @@
+configuration {
+  modi: "drun,run,window";
+  icon-theme: "Iosevka";
+  show-icons: true;
+  terminal: "alacritty";
+  drun-display-format: "{icon} {name}";
+  location: 0;
+  disable-history: false;
+  hide-scrollbar: true;
+  display-drun: "> ";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1f1f1f;
+  fg: #d9d8ce;
+
+  background-color: @bg;
+  border: 0;
+
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  border: 2px;
+  border-color: @fg;
+  width: 35%;
+}
+
+element {
+  /* Added left padding to create space for the selection bar */
+  padding: 8px 12px; 
+  text-color: @fg;
+}
+
+element selected {
+  background-color: @bg-alt;
+
+  border: 0px 0px 0px 2px;
+  border-color: @fg;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+inputbar {
+  margin: 8px 8px 4px 8px;
+  border-radius: 16px;
+  children: [prompt, entry];
+}
+
+prompt {
+  text-color: @fg;
+  padding: 12px;
+}
+
+entry {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 12px 0px 12px 0px;
+}
+
+listview {
+  margin: 4px 8px 12px 8px;
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
