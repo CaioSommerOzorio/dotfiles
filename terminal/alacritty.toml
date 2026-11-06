@@ -1,0 +1,23 @@
+[window]
+padding = { x = 10, y = 10 }
+opacity = 0.85
+
+[font]
+normal  =  { family = "BigBlueTermPlus Nerd Font Mono", style = "Regular" }
+bold    =  { family = "BigBlueTermPlus Nerd Font Mono", style = "Bold" }
+italic  =  { family = "BigBlueTermPlus Nerd Font Mono", style = "Italic" }
+
+[colors.primary]
+foreground = "#ffffff"
+background = "#1c1c1c"
+
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Control"
+chars = "\u0017"
+
+# no limits to the larp
+[[keyboard.bindings]]
+key = "f"
+mods = "Control"
+chars = "cls && fastfetch\n"
