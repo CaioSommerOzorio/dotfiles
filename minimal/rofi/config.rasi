@@ -1,6 +1,6 @@
 configuration {
   modi: "drun,run,window";
-  icon-theme: "Iosevka";
+  font: "Iosevka";
   show-icons: true;
   terminal: "alacritty";
   drun-display-format: "{icon} {name}";

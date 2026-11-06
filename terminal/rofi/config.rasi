@@ -1,7 +1,7 @@
 configuration {
   modi: "drun,run,window";
-  icon-theme: "Iosevka";
-  show-icons: true;
+  font: "BigBlueTermPlus Nerd Font Mono 14";
+  show-icons: false;
   terminal: "alacritty";
   drun-display-format: "{icon} {name}";
   location: 0;
@@ -14,7 +14,9 @@ configuration {
 
 * {
   bg: #1f1f1f;
-  fg: #d9d8ce;
+  fg: #ffffff;
+  acc: #d47782;
+  altbg: #5c3237;
 
   background-color: @bg;
   border: 0;
@@ -25,9 +27,9 @@ configuration {
 }
 
 window {
-  border: 2px;
-  border-color: @fg;
-  width: 35%;
+  border-color: @altbg;
+  border: 0px 2px 2px 0px;
+  width: 20%;
 }
 
 element {
@@ -37,10 +39,7 @@ element {
 }
 
 element selected {
-  background-color: @bg-alt;
-
-  border: 0px 0px 0px 2px;
-  border-color: @fg;
+  text-color: @acc;
 }
 
 element-text {
@@ -56,7 +55,7 @@ inputbar {
 }
 
 prompt {
-  text-color: @fg;
+  text-color: @acc;
   padding: 12px;
 }
 

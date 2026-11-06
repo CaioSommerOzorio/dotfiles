@@ -12,6 +12,7 @@ polybar -r cpubackground &
 polybar -r rambackground &
 polybar -r batterybackground &
 polybar -r volumebackground &
+polybar -r meterbackground &
 
 sleep 0.1
 
@@ -38,3 +39,7 @@ polybar -r batteryfooter &
 polybar -r volumeheader &
 polybar -r volume &
 polybar -r volumefooter &
+
+polybar -r meterheader &
+polybar -r meter &
+polybar -r meterfooter &
