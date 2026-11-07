@@ -1,0 +1,78 @@
+configuration {
+  modi: "drun,run,window";
+  font: "BigBlueTermPlus Nerd Font Mono 14";
+  show-icons: false;
+  terminal: "alacritty";
+  drun-display-format: "{icon} {name}";
+  location: 0;
+  disable-history: false;
+  hide-scrollbar: true;
+  display-drun: "> ";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1f1f1f;
+  fg: #ffffff;
+  acc: #d47782;
+  altbg: #5c3237;
+
+  background-color: @bg;
+  border: 0;
+
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  border-color: @altbg;
+  border: 0px 2px 2px 0px;
+  width: 20%;
+}
+
+element {
+  /* Added left padding to create space for the selection bar */
+  padding: 8px 12px; 
+  text-color: @fg;
+}
+
+element selected {
+  text-color: @acc;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+inputbar {
+  margin: 8px 8px 4px 8px;
+  border-radius: 16px;
+  children: [prompt, entry];
+}
+
+prompt {
+  text-color: @acc;
+  padding: 12px;
+}
+
+entry {
+  background-color: @bg;
+  text-color: @fg;
+  padding: 12px 0px 12px 0px;
+}
+
+listview {
+  margin: 4px 8px 12px 8px;
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+}
+
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
+}
