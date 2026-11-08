@@ -119,12 +119,14 @@ bindsym $mod+Shift+o move container to workspace number $ws12
 bindsym $mod+Shift+p move container to workspace number $ws13
 
 for_window [class="^.*"] border pixel 0
-for_window [class="alacritty"] border pixel 1
+for_window [class="Alacritty"] border pixel 2
 
-hide_edge_borders smart
 
 client.unfocused #ff0000 #00ff00 #0000ff #ffffff #1f1f1f
-client.focused #ff0000 #00ff00 #0000ff #ffffff #d9d8ce
+client.focused #ff0000 #00ff00 #0000ff #B9CC9A #B9CC9A
 
 gaps inner 10
 gaps top 50
+workspace 11 gaps top 0
+workspace 12 gaps top 0
+workspace 13 gaps top 0

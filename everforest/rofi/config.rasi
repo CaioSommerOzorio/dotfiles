@@ -13,10 +13,9 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1f1f1f;
-  fg: #ffffff;
-  acc: #d47782;
-  altbg: #5c3237;
+  bg: #202528;
+  fg: #7C8377;
+  acc: #B9CC9A;
 
   background-color: @bg;
   border: 0;
@@ -27,8 +26,8 @@ configuration {
 }
 
 window {
-  border-color: @altbg;
-  border: 0px 2px 2px 0px;
+  border: 5px;
+  border-color: @acc;
   width: 20%;
 }
 
@@ -61,7 +60,7 @@ prompt {
 
 entry {
   background-color: @bg;
-  text-color: @fg;
+  text-color: @acc;
   padding: 12px 0px 12px 0px;
 }
 
@@ -69,7 +68,7 @@ listview {
   margin: 4px 8px 12px 8px;
   background-color: @bg;
   columns: 1;
-  lines: 5;
+  lines: 6;
 }
 
 mainbox {
