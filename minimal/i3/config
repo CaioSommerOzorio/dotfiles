@@ -15,6 +15,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec alacritty
 bindsym $mod+space exec --no-startup-id rofi -show drun
 bindsym $mod+s exec --no-startup-id flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id "scrot -d 3 -a 0,0,1920,1080 ~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 bindsym $mod+q kill
 
