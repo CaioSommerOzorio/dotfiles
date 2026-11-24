@@ -22,6 +22,6 @@ vim.api.nvim_set_hl(0, "Boolean", { fg = "#ddc7f2" })
 -- User defined
 vim.api.nvim_set_hl(0, "Function", { fg = "#B9CC9A" })
 vim.api.nvim_set_hl(0, "Special", { fg = "#bab9f0" })
-vim.api.nvim_set_hl(0, "Type", { fg = "#e1b9f0" })
+vim.api.nvim_set_hl(0, "Type", { fg = "#bab9f0" })
 vim.api.nvim_set_hl(0, "@type.builtin.cpp", { fg = "#bab9f0" })
 vim.api.nvim_set_hl(0, "@variable", { fg = "#D3C6AA" })

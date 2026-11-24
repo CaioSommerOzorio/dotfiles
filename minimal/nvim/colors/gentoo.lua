@@ -6,7 +6,7 @@ end
 
 vim.g.colors_name = "gentoo"
 
-vim.api.nvim_set_hl(0, "Normal", { fg = "#d9d8ce", bg = "#1f1f1f" })
+vim.api.nvim_set_hl(0, "Normal", { fg = "#d9d8ce", bg = NONE })
 
 vim.api.nvim_set_hl(0, "PreProc", { fg = "#a5a5a5" })
 vim.api.nvim_set_hl(0, "Identifier", { fg = "#ffffff" })

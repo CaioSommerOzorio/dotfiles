@@ -28,10 +28,12 @@ vim.o.clipboard = 'unnamedplus'
 
 require("lazy").setup({
   {
-    "echasnovski/mini.pairs",
-    version = false,
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
     config = function()
-        require("mini.pairs").setup()
+      require("nvim-autopairs").setup({
+        check_ts = true,
+      })
     end,
   },
 
