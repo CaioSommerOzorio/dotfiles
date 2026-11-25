@@ -34,6 +34,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Window Management
+focus_follows_mouse no
 bindsym $mod+q kill
 bindsym $mod+r mode "resize"
 
@@ -127,3 +128,7 @@ client.focused #ff0000 #00ff00 #0000ff #ffffff #d9d8ce
 
 gaps inner 10
 gaps top 50
+
+workspace 11 gaps top 0
+workspace 12 gaps top 0
+workspace 13 gaps top 0

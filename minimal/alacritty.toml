@@ -6,7 +6,10 @@ opacity = 0.5
 normal = { family = "Iosevka", style = "Regular" }
 bold = { family = "Iosevka", style = "Bold" }
 italic = { family = "Iosevka", style = "Italic" }
-size = 12
+size = 14
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.25"
 
 [colors.primary]
 foreground = "#d9d8ce"
