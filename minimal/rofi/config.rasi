@@ -1,6 +1,6 @@
 configuration {
   modi: "drun,run,window";
-  font: "Iosevka";
+  font: "Iosevka 14";
   show-icons: true;
   terminal: "alacritty";
   drun-display-format: "{icon} {name}";
@@ -13,7 +13,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1f1f1f;
+  bg: #11161A;
   fg: #d9d8ce;
 
   background-color: @bg;
